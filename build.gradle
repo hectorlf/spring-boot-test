@@ -12,6 +12,14 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
+sourceSets {
+	main {
+		resources {
+			srcDir 'src/main/web'
+		}
+	}
+}
+
 jar {
     baseName = 'gs-spring-boot'
     version =  '0.1.0'
