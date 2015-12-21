@@ -11,7 +11,7 @@ public class HelloController {
         return "index";
     }
 
-    @RequestMapping("/secure/hello")
+    @RequestMapping("/secure/")
     public String secureIndex() {
         return "secure-index";
     }

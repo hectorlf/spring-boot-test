@@ -12,8 +12,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/secure/**").hasRole("USER").and().httpBasic()
-			;//.and().authorizeRequests().anyRequest().permitAll();
+		http.authorizeRequests().antMatchers("/secure/**").hasRole("ADMIN").antMatchers("/**").permitAll().and().httpBasic();
 	}
 
 	@Override
