@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"/>
 <title>Welcome!</title>
 </head>
 <body>
-<h1>Greetings from Spring Boot! Yay!</h1>
+<h1 th:each="m : ${messages}" th:text="${m.subject} + ' ' + ${m.text}">Greetings!</h1>
 </body>
 </html>
