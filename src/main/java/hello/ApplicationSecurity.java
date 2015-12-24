@@ -16,7 +16,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableConfigurationProperties
 public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 
-	private static final String[] MANAGEMENT_ENDPOINTS = {"/management/info"};
+	private static final String[] MANAGEMENT_ENDPOINTS = {"/management/dump","/management/health","/management/metrics","/management/trace"};
 
 	@Bean
 	@ConditionalOnMissingBean
@@ -47,7 +47,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().withUser("user").password("user").roles("USER")
-			.and().withUser("admin").password("admin").roles("ADMIN");
+			.and().withUser("admin").password("admin").roles("USER","ADMIN");
 	}
 
 }
