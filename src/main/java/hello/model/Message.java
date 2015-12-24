@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="messages")
-@SequenceGenerator(name="jpa_seq",allocationSize=1)
+@SequenceGenerator(name="jpa_seq",sequenceName="jpa_seq",allocationSize=1)
 public class Message {
 
 	@Id
