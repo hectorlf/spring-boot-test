@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Uh oh...</title>
+</head>
+<body>
+<h1 th:text="${#httpServletRequest.getAttribute('javax.servlet.error.status_code')}">Error</h1>
+<p>Shit happens...</p>
+</body>
+</html>
