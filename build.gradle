@@ -12,6 +12,10 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
+project.sourceCompatibility = '1.8'
+project.archivesBaseName = 'spring-boot-test'
+project.version = '0.1.0'
+
 sourceSets {
 	main {
 		resources {
@@ -20,17 +24,9 @@ sourceSets {
 	}
 }
 
-jar {
-    baseName = 'gs-spring-boot'
-    version =  '0.1.0'
-}
-
 repositories {
     mavenCentral()
 }
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 configurations {
     compile.exclude module: "spring-boot-starter-tomcat"
