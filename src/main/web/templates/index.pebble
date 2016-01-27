@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta charset="UTF-8"/>
 <title>Welcome!</title>
 </head>
 <body>
-<h1 th:each="m : ${messages}" th:text="${m.subject} + ' ' + ${m.text}">Greetings!</h1>
+{% for message in messages %}
+<h1>{{message.subject}} {{message.text}}</h1>
+{% endfor %}
 <hr/>
 <p>Users:</p>
 <ul>
