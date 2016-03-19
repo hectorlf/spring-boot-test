@@ -54,3 +54,9 @@ dependencies {
 task start(dependsOn: bootRun) {
 	outputs.upToDateWhen { false }
 }
+
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.12'
+}
